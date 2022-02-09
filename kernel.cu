@@ -13,9 +13,9 @@ __global__ void mm_kernel(float* A, float* B, float* C, unsigned int M, unsigned
 
     for(unsigned int i = 0; i < K; i++){
         
-        sum += A[row*K + i]*B[i*N + col]
+        sum += A[row*K + i]*B[i*N + col];
     }
-    c[row*N + col] = sum;
+    C[row*N + col] = sum;
     }
 
 
